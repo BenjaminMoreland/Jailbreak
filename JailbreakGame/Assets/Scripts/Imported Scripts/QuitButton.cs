@@ -12,6 +12,7 @@ public class QuitButton : MonoBehaviour
     //add this to a button to make it quit the game
     public void QuitNow()
     {
+        Debug.Log("Quit Application.");
         Application.Quit();
     }
 }
