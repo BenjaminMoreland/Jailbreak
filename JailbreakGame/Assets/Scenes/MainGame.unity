@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1548830658}
-  LerpVal: 0.545
+  LerpVal: 0.103
 --- !u!1 &89011609
 GameObject:
   m_ObjectHideFlags: 0

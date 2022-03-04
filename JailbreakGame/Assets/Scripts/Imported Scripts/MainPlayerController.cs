@@ -29,7 +29,7 @@ public class MainPlayerController : MonoBehaviour
     private Rigidbody2D myRb;
     private Collider2D myCollider;
 
-    //used for checking what direction to be flipped
+    //used for checking what direction to be flipped, made public for the FollowCamera script to grab
     [HideInInspector]
     public bool facingRight = true;
 
