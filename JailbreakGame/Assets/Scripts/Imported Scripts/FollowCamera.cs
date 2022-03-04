@@ -9,6 +9,8 @@ public class FollowCamera : MonoBehaviour
     [Tooltip("Set between 0 and 1. Kinda how fast it moves to the target."), Range(0,1)]
     public float LerpVal = 0.8f;
 
+    private bool faceR;
+
     float ShakeTime = 0;
     float ShakeMagnitude = 0;
     //call this function to make the screen shake
@@ -27,18 +29,26 @@ public class FollowCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        faceR = FindObjectOfType<MainPlayerController>();
     }
     //fixed update runs once per physics frame
     private void FixedUpdate()
     {
         if(Target != null)
         {
-            //calculate where the camera is moving towards
-            Vector3 newPos = Target.transform.position;
-            newPos.z = transform.position.z;
+            if(faceR)
+            {
+                Vector3 newPos = Target.transform.position + new Vector3 (3,1,0);
+                newPos.z = transform.position.z;
+                transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
+            }
+            else
+            {
+                Vector3 newPos = Target.transform.position + new Vector3 (-3,1,0);
+                newPos.z = transform.position.z;
+                transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
+            }
             //lerp towards the camera to make a smoothing effect in the movement
-            transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
         }
 
         if (ShakeTime > 0)
