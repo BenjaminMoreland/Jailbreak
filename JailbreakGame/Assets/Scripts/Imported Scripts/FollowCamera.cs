@@ -39,11 +39,22 @@ public class FollowCamera : MonoBehaviour
     //fixed update runs once per physics frame
     private void FixedUpdate()
     {
+        moveInput = FindObjectOfType<MainPlayerController>().moveInputH;
         if (Target != null)
         {
             // Code by: Logan Laurance
+            // Checks if either the player is moving right or left, then updates the boolean variable accordingly
+            if (moveInput > 0)
+            {
+                faceR = true;
+            }
+            if (moveInput < 0)
+            {
+                faceR = false;
+            }
+            // Code by: Logan Laurance
             // If the player is facing right, it will pan over to the right to show more of that area, and vice versa if the player is facing left
-            if(faceR)
+            if (faceR)
             {
                 Vector3 newPos = Target.transform.position + new Vector3 (4,1.75f,0);
                 newPos.z = transform.position.z;
@@ -72,16 +83,6 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Code by: Logan Laurance
-        // Checks if either the D key or A key are pressed, and updates the faceR variable so the camera is synced with the player
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            faceR = true;
-        }
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            faceR = false;
-        }
         // Test shake key, will find a use for this at some point
         if(Input.GetKeyDown(KeyCode.Space))
         {
