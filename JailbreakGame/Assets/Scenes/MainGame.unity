@@ -633,6 +633,10 @@ PrefabInstance:
       value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6827786512108738588, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
+      propertyPath: moveInputH
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827786512108738588, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
       propertyPath: checkRadius
       value: 0.1
       objectReference: {fileID: 0}

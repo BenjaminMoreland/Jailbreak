@@ -9,7 +9,10 @@ public class FollowCamera : MonoBehaviour
     [Tooltip("Set between 0 and 1. Kinda how fast it moves to the target."), Range(0,1)]
     public float LerpVal = 0.8f;
 
+    [HideInInspector]
     private bool faceR;
+    [HideInInspector]
+    private float moveInput;
 
     float ShakeTime = 0;
     float ShakeMagnitude = 0;
@@ -34,17 +37,18 @@ public class FollowCamera : MonoBehaviour
     //fixed update runs once per physics frame
     private void FixedUpdate()
     {
-        if(Target != null)
+        moveInput = FindObjectOfType<MainPlayerController>().moveInputH;
+        if (Target != null)
         {
-            if(faceR)
+            if(faceR && moveInput < 0)
             {
                 Vector3 newPos = Target.transform.position + new Vector3 (3,1,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }
-            else
+            else if(!faceR && moveInput > 0)
             {
-                Vector3 newPos = Target.transform.position + new Vector3 (-3,1,0);
+                Vector3 newPos = Target.transform.position - new Vector3 (3,1,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }

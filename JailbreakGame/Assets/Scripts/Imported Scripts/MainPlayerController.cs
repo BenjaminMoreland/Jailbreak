@@ -30,6 +30,7 @@ public class MainPlayerController : MonoBehaviour
     private Collider2D myCollider;
 
     //used for checking what direction to be flipped
+    [HideInInspector]
     public bool facingRight = true;
 
     //things for ground checking
