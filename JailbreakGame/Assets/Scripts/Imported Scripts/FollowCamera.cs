@@ -68,7 +68,7 @@ public class FollowCamera : MonoBehaviour
             }
         }
 
-        if (ShakeTime > 0)
+        /*if (ShakeTime > 0)
         {
             ShakeTime -= Time.deltaTime;
             Vector3 randDir = Random.insideUnitCircle * ShakeMagnitude;
@@ -77,16 +77,16 @@ public class FollowCamera : MonoBehaviour
         else
         {
             ShakeMagnitude = 0;
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
         // Test shake key, will find a use for this at some point
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*if(Input.GetKeyDown(KeyCode.Space))
         {
             TriggerShake(0.2f, 0.2f);
-        }
+        }*/
     }
 }
