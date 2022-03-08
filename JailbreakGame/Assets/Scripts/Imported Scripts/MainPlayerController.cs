@@ -128,6 +128,7 @@ public class MainPlayerController : MonoBehaviour
                 // Plays the landing noise once the player has landed, then resets it to false
                 if(jumpPressed == false && havePressedJump == true && isClimbing == false)
                 {
+                    myAud.pitch = 1;
                     myAud.PlayOneShot(landNoise);
                     havePressedJump = false;
                 }
@@ -136,6 +137,7 @@ public class MainPlayerController : MonoBehaviour
             //check if jump can be triggered
             if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false)
             {
+                myAud.pitch = 1;
                 myAud.PlayOneShot(jumpNoise);
                 myRb.drag = airDrag;
                 if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
@@ -151,6 +153,7 @@ public class MainPlayerController : MonoBehaviour
             }
             else if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && jumps > 0 && isClimbing == false)
             {
+                myAud.pitch = 1.2f;
                 myAud.PlayOneShot(jumpNoise);
                 myRb.drag = airDrag;
                 if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))

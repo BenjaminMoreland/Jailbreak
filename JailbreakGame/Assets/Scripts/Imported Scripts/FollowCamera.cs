@@ -48,7 +48,7 @@ public class FollowCamera : MonoBehaviour
             {
                 faceR = true;
             }
-            if (moveInput < 0)
+            else if (moveInput < 0)
             {
                 faceR = false;
             }
@@ -56,13 +56,13 @@ public class FollowCamera : MonoBehaviour
             // If the player is facing right, it will pan over to the right to show more of that area, and vice versa if the player is facing left
             if (faceR)
             {
-                Vector3 newPos = Target.transform.position + new Vector3 (4,1.75f,0);
+                Vector3 newPos = Target.transform.position + new Vector3 (11,4,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }
             else if(!faceR)
             {
-                Vector3 newPos = Target.transform.position - new Vector3 (4,-1.75f,0);
+                Vector3 newPos = Target.transform.position - new Vector3 (11,-4,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }
