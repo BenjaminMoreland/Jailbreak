@@ -48,7 +48,7 @@ public class FollowCamera : MonoBehaviour
             {
                 faceR = true;
             }
-            if (moveInput < 0)
+            else if (moveInput < 0)
             {
                 faceR = false;
             }
@@ -56,19 +56,19 @@ public class FollowCamera : MonoBehaviour
             // If the player is facing right, it will pan over to the right to show more of that area, and vice versa if the player is facing left
             if (faceR)
             {
-                Vector3 newPos = Target.transform.position + new Vector3 (4,1.75f,0);
+                Vector3 newPos = Target.transform.position + new Vector3 (11,4,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }
             else if(!faceR)
             {
-                Vector3 newPos = Target.transform.position - new Vector3 (4,-1.75f,0);
+                Vector3 newPos = Target.transform.position - new Vector3 (11,-4,0);
                 newPos.z = transform.position.z;
                 transform.position = Vector3.Lerp(transform.position, newPos, LerpVal);
             }
         }
 
-        if (ShakeTime > 0)
+        /*if (ShakeTime > 0)
         {
             ShakeTime -= Time.deltaTime;
             Vector3 randDir = Random.insideUnitCircle * ShakeMagnitude;
@@ -77,16 +77,16 @@ public class FollowCamera : MonoBehaviour
         else
         {
             ShakeMagnitude = 0;
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
         // Test shake key, will find a use for this at some point
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*if(Input.GetKeyDown(KeyCode.Space))
         {
             TriggerShake(0.2f, 0.2f);
-        }
+        }*/
     }
 }

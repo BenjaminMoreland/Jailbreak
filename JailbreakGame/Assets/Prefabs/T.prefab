@@ -158,6 +158,7 @@ MonoBehaviour:
   FC: {fileID: 0}
   FireShakeTime: 0.1
   FireShakeMagnitude: 0.1
+  facingRight: 1
   groundCheck: {fileID: 0}
   checkRadius: 0
   whatIsGround:

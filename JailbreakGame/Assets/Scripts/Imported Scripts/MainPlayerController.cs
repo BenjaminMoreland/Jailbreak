@@ -43,6 +43,7 @@ public class MainPlayerController : MonoBehaviour
     private int jumps;
     public float jumpForce;
     private bool jumpPressed = true;
+    private bool havePressedJump = false;
 
     private float jumpTimer = 0;
     public float jumpTime = 0.2f;
@@ -54,6 +55,7 @@ public class MainPlayerController : MonoBehaviour
 
     private AudioSource myAud;
     public AudioClip jumpNoise;
+    public AudioClip landNoise;
     public AudioClip deathNoise;
 
     //ladder things
@@ -104,11 +106,20 @@ public class MainPlayerController : MonoBehaviour
             moveInputH = Input.GetAxisRaw("Horizontal");
             if (isGrounded == true)
             {
+                // Code by: Logan Laurance
+                // Plays the landing noise once the player has landed, then resets it to false
+                if(jumpPressed == false && havePressedJump == true && isClimbing == false)
+                {
+                    myAud.pitch = 1;
+                    myAud.PlayOneShot(landNoise);
+                    havePressedJump = false;
+                }
                 jumps = extraJumps;
             }
             //check if jump can be triggered
             if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false)
             {
+                myAud.pitch = 1;
                 myAud.PlayOneShot(jumpNoise);
                 myRb.drag = airDrag;
                 if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
@@ -120,9 +131,11 @@ public class MainPlayerController : MonoBehaviour
                     myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
                 }
                 jumpPressed = true;
+                havePressedJump = true;
             }
             else if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && jumps > 0 && isClimbing == false)
             {
+                myAud.pitch = 1.2f;
                 myAud.PlayOneShot(jumpNoise);
                 myRb.drag = airDrag;
                 if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
@@ -134,6 +147,7 @@ public class MainPlayerController : MonoBehaviour
                     myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
                 }
                 jumpPressed = true;
+                havePressedJump = true;
                 jumps--;
             }
             else if (Input.GetAxisRaw("Jump") == 0)
@@ -147,6 +161,7 @@ public class MainPlayerController : MonoBehaviour
                 myRb.drag = airDrag;
                 myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
                 jumpPressed = true;
+                havePressedJump = true;
             }
         }
     }
