@@ -14,7 +14,6 @@ public class MainPlayerController : MonoBehaviour
     //Laser spawner
     public GameObject Laser;
     public float Cooldown = 0.2f;
-    float Timer = 0;
     public float LaserSpeed = 15;
     public Vector3 Offset1 = new Vector3(.07f, 1f, 0);
     public Vector3 Offset2 = new Vector3(-.07f, 1f, 0);
@@ -101,23 +100,6 @@ public class MainPlayerController : MonoBehaviour
     {
         if (controlOn)
         {
-            Timer += Time.deltaTime;
-            //increase the timer based on time passed
-            if (Timer > Cooldown && (Input.GetMouseButtonDown(1)))
-            {
-                //animator settings
-                myAnim.SetBool("Shooting", true);
-                //reset the timer
-                Timer = 0;
-                //fire the lasers
-                Fire(Offset1);
-                FC.TriggerShake(FireShakeTime, FireShakeMagnitude);
-            }
-            else if (Timer > Cooldown && !(Input.GetMouseButtonDown(1)))
-            {
-                myAnim.SetBool("Shooting", false);
-            }
-
             //check for ground
             moveInputH = Input.GetAxisRaw("Horizontal");
             if (isGrounded == true)
