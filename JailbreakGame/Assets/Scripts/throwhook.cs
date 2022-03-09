@@ -6,7 +6,7 @@ public class throwhook : MonoBehaviour
 {
     public GameObject hook;
     GameObject curHook;
-
+    public bool RopeActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,23 @@ public class throwhook : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (RopeActive == false)
+            {
 
-            curHook = (GameObject)Instantiate(hook, transform.position, Quaternion.identity);
 
-            curHook.GetComponent<RopeScript>().desitny = destiny;
+                Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                curHook = (GameObject)Instantiate(hook, transform.position, Quaternion.identity);
+
+                curHook.GetComponent<RopeScript>().destiny = destiny;
+
+                RopeActive = true;
+            }
+            else
+            {
+                Destroy(curHook);
+                RopeActive = false;
+            }
         }
     }
 }
