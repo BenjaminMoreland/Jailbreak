@@ -57,6 +57,7 @@ public class MainPlayerController : MonoBehaviour
     private AudioSource myAud;
     public AudioClip jumpNoise;
     public AudioClip landNoise;
+    public AudioClip footSteps;
     public AudioClip deathNoise;
 
     //ladder things
@@ -106,7 +107,7 @@ public class MainPlayerController : MonoBehaviour
             // Sets various animator variables to make movement proper, climbing work, crawling crawl, etc etc.
             myAnim.SetFloat("Speed", Mathf.Abs(moveInputH));
             myAnim.SetBool("isClimbing", isClimbing);
-            myAnim.SetFloat("isMovingUp", moveInputV);
+            myAnim.SetFloat("IsMovingUp", Input.GetAxisRaw("Vertical"));
 
             Timer += Time.deltaTime;
             //increase the timer based on time passed
@@ -300,6 +301,11 @@ public class MainPlayerController : MonoBehaviour
         {
             StartCoroutine(OnDeath());
         }
+    }
+
+    private void Footsteps()
+    {
+        myAud.PlayOneShot(footSteps);
     }
 
     private IEnumerator OnDeath()
