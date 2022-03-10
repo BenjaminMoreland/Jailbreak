@@ -1090,11 +1090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1617384725738981669, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 171.1
+      value: 171.03
       objectReference: {fileID: 0}
     - target: {fileID: 1617384725738981669, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.433
+      value: 15.73
       objectReference: {fileID: 0}
     - target: {fileID: 1617384725738981669, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1180,6 +1180,10 @@ PrefabInstance:
       propertyPath: airSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6827786512108738588, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
+      propertyPath: footSteps
+      value: 
+      objectReference: {fileID: 8300000, guid: d07254c167c3a134b89c905ab112d1e5, type: 3}
     - target: {fileID: 6827786512108738588, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
       propertyPath: jumpForce
       value: 20
