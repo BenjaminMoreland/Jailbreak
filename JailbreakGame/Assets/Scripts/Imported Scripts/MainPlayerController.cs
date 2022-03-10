@@ -103,6 +103,11 @@ public class MainPlayerController : MonoBehaviour
     {
         if (controlOn)
         {
+            // Sets various animator variables to make movement proper, climbing work, crawling crawl, etc etc.
+            myAnim.SetFloat("Speed", Mathf.Abs(moveInputH));
+            myAnim.SetBool("isClimbing", isClimbing);
+            myAnim.SetFloat("isMovingUp", moveInputV);
+
             Timer += Time.deltaTime;
             //increase the timer based on time passed
             if (Timer > Cooldown && (Input.GetMouseButtonDown(1)))
