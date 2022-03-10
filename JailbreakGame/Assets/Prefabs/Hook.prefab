@@ -101,12 +101,12 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 100
+  m_AngularDrag: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!58 &4729455760495425559
 CircleCollider2D:
@@ -165,7 +165,7 @@ MonoBehaviour:
   distance: 1
   nodePrefab: {fileID: 4461185044039560848, guid: 33059f56a8d481945a917ef04d7cb479, type: 3}
   player: {fileID: 1617384725738981668, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
-  LastNode: {fileID: 0}
+  LastNode: {fileID: 4461185044039560848, guid: 33059f56a8d481945a917ef04d7cb479, type: 3}
   Nodes: []
   lr: {fileID: 0}
 --- !u!120 &-3496717055061372795
