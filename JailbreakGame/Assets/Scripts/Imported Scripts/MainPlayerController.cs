@@ -129,6 +129,23 @@ public class MainPlayerController : MonoBehaviour
 =======
 >>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
 
+            Timer += Time.deltaTime;
+            //increase the timer based on time passed
+            if (Timer > Cooldown && (Input.GetMouseButtonDown(1)))
+            {
+                //animator settings
+                myAnim.SetBool("Shooting", true);
+                //reset the timer
+                Timer = 0;
+                //fire the lasers
+                Fire(Offset1);
+                FC.TriggerShake(FireShakeTime, FireShakeMagnitude);
+            }
+            else if (Timer > Cooldown && !(Input.GetMouseButtonDown(1)))
+            {
+                myAnim.SetBool("Shooting", false);
+            }
+
             //check for ground
             moveInputH = Input.GetAxisRaw("Horizontal");
             if (isGrounded == true)
