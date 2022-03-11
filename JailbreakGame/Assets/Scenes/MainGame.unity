@@ -177,7 +177,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
+<<<<<<< HEAD
   orthographic size: 6.186149
+=======
+  orthographic size: 7
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -456,6 +460,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838527935}
   m_Enabled: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Density: 1
   m_Material: {fileID: 0}
@@ -53073,6 +53078,10 @@ Tilemap:
   m_Tiles:
   - first: {x: 1, y: -30, z: 0}
 >>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
+=======
+  m_Tiles:
+  - first: {x: 1, y: -30, z: 0}
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -53082,6 +53091,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
 <<<<<<< HEAD
   - first: {x: 4, y: -4, z: 0}
     second:
@@ -53095,6 +53105,8 @@ Tilemap:
       m_AllTileFlags: 1073741825
   - first: {x: 5, y: -4, z: 0}
 =======
+=======
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
   - first: {x: 2, y: -30, z: 0}
 >>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
     second:

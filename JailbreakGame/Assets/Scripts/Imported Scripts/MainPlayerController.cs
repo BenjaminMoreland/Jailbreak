@@ -108,6 +108,7 @@ public class MainPlayerController : MonoBehaviour
             myAnim.SetFloat("Speed", Mathf.Abs(moveInputH));
             myAnim.SetBool("isClimbing", isClimbing);
             myAnim.SetFloat("IsMovingUp", Input.GetAxisRaw("Vertical"));
+<<<<<<< HEAD
 
             Timer += Time.deltaTime;
             //increase the timer based on time passed
@@ -125,6 +126,8 @@ public class MainPlayerController : MonoBehaviour
             {
                 myAnim.SetBool("Shooting", false);
             }
+=======
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
 
             //check for ground
             moveInputH = Input.GetAxisRaw("Horizontal");
