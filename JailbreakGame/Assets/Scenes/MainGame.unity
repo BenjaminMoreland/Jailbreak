@@ -177,7 +177,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -456,6 +456,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838527935}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -53026,6 +53027,10 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 3, y: -4, z: 0}
+=======
+  m_Tiles:
+  - first: {x: 1, y: -30, z: 0}
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -53035,6 +53040,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
   - first: {x: 4, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -53046,6 +53052,9 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 5, y: -4, z: 0}
+=======
+  - first: {x: 2, y: -30, z: 0}
+>>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
     second:
       serializedVersion: 2
       m_TileIndex: 0
