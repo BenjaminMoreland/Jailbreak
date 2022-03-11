@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &452241389223221913
+--- !u!1 &6231551968156779805
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 452241389223221912}
-  - component: {fileID: 452241389223221888}
-  - component: {fileID: 452241389223221889}
-  - component: {fileID: 837687795182439820}
-  - component: {fileID: 452241389223221891}
-  - component: {fileID: 452241389223221916}
-  - component: {fileID: 452241389223221917}
-  - component: {fileID: 452241389223221918}
-  - component: {fileID: 452241389223221919}
+  - component: {fileID: 6231551968156779806}
+  - component: {fileID: 6231551968156779801}
+  - component: {fileID: 6231551968156779800}
+  - component: {fileID: 6231551968156779807}
+  - component: {fileID: 6231551968156779798}
+  - component: {fileID: 6231551968156779797}
+  - component: {fileID: 6231551968156779796}
+  - component: {fileID: 6231551968156779803}
+  - component: {fileID: 6231551968156779802}
   m_Layer: 8
-  m_Name: RatGuard
+  m_Name: Rat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &452241389223221912
+--- !u!4 &6231551968156779806
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: 62, z: 0}
-  m_LocalScale: {x: 14, y: 14, z: 1}
+  m_LocalPosition: {x: 55, y: -24.73, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &452241389223221888
+--- !u!212 &6231551968156779801
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,14 +89,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &452241389223221889
+--- !u!50 &6231551968156779800
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -109,21 +109,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!61 &837687795182439820
-BoxCollider2D:
+  m_Constraints: 6
+--- !u!60 &6231551968156779807
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -0.02}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,37 +133,40 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9, y: 0.85}
-  m_EdgeRadius: 0
---- !u!114 &452241389223221891
+  m_Points:
+    m_Paths:
+    - - {x: 0.48191786, y: 0.00044178963}
+      - {x: 0.009831667, y: 0.26558906}
+      - {x: -0.4817531, y: 0.0006611347}
+      - {x: 0.009831667, y: -0.26067322}
+--- !u!114 &6231551968156779798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51f309830e3ce9443a76d7515b04476d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Points:
-  - {x: -25, y: 62, z: 0}
-  - {x: 300, y: 62, z: 0}
-  PaceSpeed: 35
+  - {x: 55, y: -24.73, z: 0}
+  - {x: 100, y: -24.73, z: 0}
+  PaceSpeed: 5
   CurrentPoint: 0
-  ChaseSpeed: 150
+  ChaseSpeed: 15
   CloseEnough: 0.1
-  ChaseDist: 50
+  ChaseDist: 10
   Target: {fileID: 0}
---- !u!114 &452241389223221916
+--- !u!114 &6231551968156779797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaaadaced712fa145b729b8bffe8935f, type: 3}
@@ -172,13 +175,13 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &452241389223221917
+--- !u!114 &6231551968156779796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3eecf4aef098ce14bbefd8c44c550763, type: 3}
@@ -187,13 +190,13 @@ MonoBehaviour:
   ObjectToMake: {fileID: 3217978468538058530, guid: 8306050ed531fac40b66b8330b9b84dd, type: 3}
   Offset: {x: 0, y: 0, z: 0}
   RandOffset: 0
---- !u!114 &452241389223221918
+--- !u!114 &6231551968156779803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b164227d47191c740ad683227b6ecb32, type: 3}
@@ -204,13 +207,13 @@ MonoBehaviour:
   DestroyAtZero: 1
   InvincTime: 0.3
   points: 1
---- !u!114 &452241389223221919
+--- !u!114 &6231551968156779802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
+  m_GameObject: {fileID: 6231551968156779805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20d35182450a18043b54cb2b234812f4, type: 3}
