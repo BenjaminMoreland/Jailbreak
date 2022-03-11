@@ -106,8 +106,7 @@ public class MainPlayerController : MonoBehaviour
             // Sets various animator variables to make movement proper, climbing work, crawling crawl, etc etc.
             myAnim.SetFloat("Speed", Mathf.Abs(moveInputH));
             myAnim.SetBool("isClimbing", isClimbing);
-            myAnim.SetFloat("IsMovingUp", Mathf.Abs(moveInputV));
-            myAnim.SetBool("onGround", isGrounded);
+            myAnim.SetFloat("IsMovingUp", Input.GetAxisRaw("Vertical"));
 
             //check for ground
             moveInputH = Input.GetAxisRaw("Horizontal");
