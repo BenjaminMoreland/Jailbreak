@@ -107,27 +107,8 @@ public class MainPlayerController : MonoBehaviour
             // Sets various animator variables to make movement proper, climbing work, crawling crawl, etc etc.
             myAnim.SetFloat("Speed", Mathf.Abs(moveInputH));
             myAnim.SetBool("isClimbing", isClimbing);
-            myAnim.SetFloat("IsMovingUp", Input.GetAxisRaw("Vertical"));
-<<<<<<< HEAD
-
-            Timer += Time.deltaTime;
-            //increase the timer based on time passed
-            if (Timer > Cooldown && (Input.GetMouseButtonDown(1)))
-            {
-                //animator settings
-                myAnim.SetBool("Shooting", true);
-                //reset the timer
-                Timer = 0;
-                //fire the lasers
-                Fire(Offset1);
-                FC.TriggerShake(FireShakeTime, FireShakeMagnitude);
-            }
-            else if (Timer > Cooldown && !(Input.GetMouseButtonDown(1)))
-            {
-                myAnim.SetBool("Shooting", false);
-            }
-=======
->>>>>>> parent of 0b57480 (Merge branch 'main' into Programmer-1)
+            myAnim.SetFloat("IsMovingUp", Mathf.Abs(moveInputV));
+            myAnim.SetBool("hasJumped", jumpPressed);
 
             Timer += Time.deltaTime;
             //increase the timer based on time passed
