@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Zapper
   - Enemy
+  - Ladder
   layers:
   - Default
   - TransparentFX
