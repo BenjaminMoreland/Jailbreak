@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 452241389223221912}
   - component: {fileID: 452241389223221888}
-  - component: {fileID: 452241389223221889}
   - component: {fileID: 837687795182439820}
   - component: {fileID: 452241389223221891}
   - component: {fileID: 452241389223221916}
   - component: {fileID: 452241389223221917}
   - component: {fileID: 452241389223221918}
   - component: {fileID: 452241389223221919}
+  - component: {fileID: -6185025101374843352}
   m_Layer: 8
   m_Name: RatGuard
   m_TagString: Enemy
@@ -89,27 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &452241389223221889
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452241389223221913}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 2
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!61 &837687795182439820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,12 +130,12 @@ MonoBehaviour:
   Points:
   - {x: -25, y: 62, z: 0}
   - {x: 300, y: 62, z: 0}
-  PaceSpeed: 35
+  PaceSpeed: 15
   CurrentPoint: 0
-  ChaseSpeed: 150
+  ChaseSpeed: 20
   CloseEnough: 0.1
-  ChaseDist: 50
-  Target: {fileID: 0}
+  ChaseDist: 10
+  Target: {fileID: 1617384725738981668, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
 --- !u!114 &452241389223221916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +197,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amount: 1
   DestroyOnCollide: 1
+--- !u!50 &-6185025101374843352
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452241389223221913}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

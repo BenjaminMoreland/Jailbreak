@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Zapper
   - Enemy
+  - Ladder
+  - Hook
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Ground
   - Enemy
   - Zapper
-  - 
+  - Hook
   - 
   - 
   - 

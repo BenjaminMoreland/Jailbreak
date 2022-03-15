@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3496717055061372795}
   m_Layer: 10
   m_Name: Hook
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2096441088080638106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 420e58083cc5ad9459d54a48175e0cef, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: 6f58c0b527d288f498dcab0e227b8cd5, type: 3}
   m_Color: {r: 1, g: 0.8632799, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destiny: {x: 0, y: 0}
   speed: 0.2
-  distance: 1
-  nodePrefab: {fileID: 4461185044039560848, guid: 33059f56a8d481945a917ef04d7cb479, type: 3}
+  distance: 0.2
+  nodePrefab: {fileID: 4461185044039560848, guid: 0655c8fc127da26479ccc5a208219536, type: 3}
   player: {fileID: 1617384725738981668, guid: 0792c796ab0ba534096b35575c2ef18b, type: 3}
   LastNode: {fileID: 0}
   Nodes: []
