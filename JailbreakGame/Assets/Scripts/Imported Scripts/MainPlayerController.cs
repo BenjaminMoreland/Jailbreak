@@ -9,25 +9,16 @@ public class MainPlayerController : MonoBehaviour
     //speed and movement variables
     public float speed;
     public float airSpeed;
+    [HideInInspector]
     public float moveInputH;
-
-    //Laser spawner
-    public GameObject Laser;
-    public float Cooldown = 0.2f;
-    float Timer = 0;
-    public float LaserSpeed = 15;
-    public Vector3 Offset1 = new Vector3(.07f, 1f, 0);
-    public Vector3 Offset2 = new Vector3(-.07f, 1f, 0);
-    public float FireError = 1f;
 
     //screen shake things
     public FollowCamera FC;
-    public float FireShakeTime = 0.1f;
-    public float FireShakeMagnitude = 0.1f;
 
     //grab this to adujust physics
     private Rigidbody2D myRb;
-    private Collider2D myCollider;
+    [HideInInspector]
+    public Collider2D myCollider;
 
     //used for checking what direction to be flipped, made public for the FollowCamera script to grab
     [HideInInspector]
@@ -109,23 +100,6 @@ public class MainPlayerController : MonoBehaviour
             myAnim.SetBool("isClimbing", isClimbing);
             myAnim.SetFloat("IsMovingUp", Mathf.Abs(moveInputV));
             myAnim.SetBool("hasJumped", jumpPressed);
-
-            Timer += Time.deltaTime;
-            //increase the timer based on time passed
-            if (Timer > Cooldown && (Input.GetMouseButtonDown(1)))
-            {
-                //animator settings
-                myAnim.SetBool("Shooting", true);
-                //reset the timer
-                Timer = 0;
-                //fire the lasers
-                Fire(Offset1);
-                FC.TriggerShake(FireShakeTime, FireShakeMagnitude);
-            }
-            else if (Timer > Cooldown && !(Input.GetMouseButtonDown(1)))
-            {
-                myAnim.SetBool("Shooting", false);
-            }
 
             //check for ground
             moveInputH = Input.GetAxisRaw("Horizontal");
@@ -262,29 +236,6 @@ public class MainPlayerController : MonoBehaviour
             {
                 Flip();
             }
-        }
-    }
-    void Fire(Vector3 offset)
-    {
-        if (facingRight == false)
-        {
-        //create the object with a position offset and affected by the rotation of the spawner
-        Vector3 spawnPos = transform.position + transform.rotation * -offset;
-        GameObject clone = Instantiate(Laser, spawnPos, transform.rotation);
-            Vector3 Scaler = clone.transform.localScale;
-            Scaler.x *= -1;
-            clone.transform.localScale = Scaler;
-        //set the speed of the clone
-        Rigidbody2D cloneRb = clone.GetComponent<Rigidbody2D>();
-        cloneRb.velocity = -transform.right * LaserSpeed;
-        }
-        else if(facingRight == true)
-        {
-            Vector3 spawnPos = transform.position + transform.rotation * offset;
-            GameObject clone = Instantiate(Laser, spawnPos, transform.rotation);
-            //set the speed of the clone
-            Rigidbody2D cloneRb = clone.GetComponent<Rigidbody2D>();
-            cloneRb.velocity = transform.right * LaserSpeed;
         }
     }
 

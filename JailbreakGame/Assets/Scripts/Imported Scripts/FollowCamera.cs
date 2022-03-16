@@ -9,9 +9,7 @@ public class FollowCamera : MonoBehaviour
     [Tooltip("Set between 0 and 1. Kinda how fast it moves to the target."), Range(0,1)]
     public float LerpVal = 0.8f;
 
-    [HideInInspector]
     private bool faceR;
-    [HideInInspector]
     private float moveInput;
 
     float ShakeTime = 0;
